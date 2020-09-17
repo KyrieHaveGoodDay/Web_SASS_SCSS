@@ -1,13 +1,110 @@
-@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@600&display=swap');
+// 主設定一定要在最上層
+$color-main:#000000;
+$color-sub:#80ed99;
+$text:'Grandstander', cursive;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 微軟正黑體;
+    color: $color-main;
+}
 
 
-$mycolor:black;
+// 頁首樣式
+#navigation 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px 120px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background: white;
+    
+    // 左邊Logo
+    #logo{
+        text-decoration: none;
+        font-family:$text;
+        font-size: 32px;
+        
+        &:hover{
+            color: $color-sub;
+        }
 
-h1{
-    color: $mycolor;
+    }
+    // 中間連結(關於我、作品集、連絡我)
+    .link {
+        align-items: center;
+        a{
+            text-decoration: none;
+            font-family: 'Grandstander', cursive;
+            font-size: 20px;
+            margin-left: 30px;
+            transition: 0.5s;
+            padding: 0 10px;
+            &:hover{
+                color: $color-sub;
+            }
+            
+        }
+    }
+
+    
+    .social{
+        text-align: right;
+        img{
+            transition: 0.5s;
+            width: 20px;
+            margin-left: 30px;
+        
+            &:hover{
+                filter: invert(100%) sepia(22%) saturate(4189%) hue-rotate(56deg) brightness(97%) contrast(90%);
+            }
+        }
+    }
+}
+
+// banner
+#banner{
+    width: 100%;
+    height: 100vh;
+    background: #eee;
+}
+
+// 關於我
+#about-me{
+    width: 100%;
+    height: 100vh;
     text-align: center;
-    font-size: 30px;
-    margin-top: 60px;
-    font-family: RANCHERS;
-    letter-spacing: 15px;
-}   
+    h2{
+        margin-top: 50px;
+        font-size: 200px;
+        font-family: $text;
+    }
+    p{
+        font-family: $text;
+        padding: 30px;
+        margin-bottom: 50px;
+        font-size: 20px;
+    }
+   
+}
+
+.title{
+    margin-top: 30px;
+    font-size: 32px;
+    font-family: $text;
+}
+.button{
+    text-decoration: none;
+        border: 2px solid black;
+        padding: 10px 60px;
+        &:hover{
+            transition: 0.5s;
+            background: #000;
+            color: white;
+        }
+}

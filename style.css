@@ -1,10 +1,117 @@
-@import url("https://fonts.googleapis.com/css2?family=Ranchers&display=swap");
-h1 {
-  color: black;
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 微軟正黑體;
+  color: #000000;
+}
+
+#navigation {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  padding: 20px 120px;
+  -webkit-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  width: 100%;
+  background: white;
+}
+
+#navigation #logo {
+  text-decoration: none;
+  font-family: "Grandstander", cursive;
+  font-size: 32px;
+}
+
+#navigation #logo:hover {
+  color: #80ed99;
+}
+
+#navigation .link {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#navigation .link a {
+  text-decoration: none;
+  font-family: 'Grandstander', cursive;
+  font-size: 20px;
+  margin-left: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 0 10px;
+}
+
+#navigation .link a:hover {
+  color: #80ed99;
+}
+
+#navigation .social {
+  text-align: right;
+}
+
+#navigation .social img {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  width: 20px;
+  margin-left: 30px;
+}
+
+#navigation .social img:hover {
+  -webkit-filter: invert(100%) sepia(22%) saturate(4189%) hue-rotate(56deg) brightness(97%) contrast(90%);
+          filter: invert(100%) sepia(22%) saturate(4189%) hue-rotate(56deg) brightness(97%) contrast(90%);
+}
+
+#banner {
+  width: 100%;
+  height: 100vh;
+  background: #eee;
+}
+
+#about-me {
+  width: 100%;
+  height: 100vh;
   text-align: center;
-  font-size: 30px;
-  margin-top: 60px;
-  font-family: RANCHERS;
-  letter-spacing: 15px;
+}
+
+#about-me h2 {
+  margin-top: 50px;
+  font-size: 200px;
+  font-family: "Grandstander", cursive;
+}
+
+#about-me p {
+  font-family: "Grandstander", cursive;
+  padding: 30px;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+
+.title {
+  margin-top: 30px;
+  font-size: 32px;
+  font-family: "Grandstander", cursive;
+}
+
+.button {
+  text-decoration: none;
+  border: 2px solid black;
+  padding: 10px 60px;
+}
+
+.button:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: #000;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */
