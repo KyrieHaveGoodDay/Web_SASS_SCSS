@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Grandstander:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Grandstander:wght@600&display=swap");
 // 主設定一定要在最上層
-$color-main:#000000;
-$color-sub:#80ed99;
-$text:'Grandstander', cursive;
-*{
+$color-main: #000000;
+$color-sub: #80ed99;
+$text: "Grandstander", cursive;
+$color-bg: #f9f9f9;
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,56 +12,51 @@ $text:'Grandstander', cursive;
     color: $color-main;
 }
 
-
 // 頁首樣式
-#navigation 
-{
+#navigation {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 20px 120px;
-    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     align-items: center;
     position: fixed;
     width: 100%;
     background: white;
-    
+
     // 左邊Logo
-    #logo{
+    #logo {
         text-decoration: none;
-        font-family:$text;
+        font-family: $text;
         font-size: 32px;
-        
-        &:hover{
+
+        &:hover {
             color: $color-sub;
         }
-
     }
     // 中間連結(關於我、作品集、連絡我)
     .link {
         align-items: center;
-        a{
+        a {
             text-decoration: none;
-            font-family: 'Grandstander', cursive;
+            font-family: "Grandstander", cursive;
             font-size: 20px;
             margin-left: 30px;
             transition: 0.5s;
             padding: 0 10px;
-            &:hover{
+            &:hover {
                 color: $color-sub;
             }
-            
         }
     }
 
-    
-    .social{
+    .social {
         text-align: right;
-        img{
+        img {
             transition: 0.5s;
             width: 20px;
             margin-left: 30px;
-        
-            &:hover{
+
+            &:hover {
                 filter: invert(100%) sepia(22%) saturate(4189%) hue-rotate(56deg) brightness(97%) contrast(90%);
             }
         }
@@ -68,43 +64,82 @@ $text:'Grandstander', cursive;
 }
 
 // banner
-#banner{
+#banner {
     width: 100%;
     height: 100vh;
     background: #eee;
 }
 
 // 關於我
-#about-me{
+#about-me {
     width: 100%;
     height: 100vh;
     text-align: center;
-    h2{
+    h2 {
         margin-top: 50px;
         font-size: 200px;
         font-family: $text;
     }
-    p{
+    p {
         font-family: $text;
         padding: 30px;
         margin-bottom: 50px;
         font-size: 20px;
     }
-   
 }
 
-.title{
+.title {
     margin-top: 30px;
     font-size: 32px;
     font-family: $text;
+    text-align: center;
 }
-.button{
+.button {
     text-decoration: none;
-        border: 2px solid black;
-        padding: 10px 60px;
-        &:hover{
-            transition: 0.5s;
-            background: #000;
-            color: white;
+    border: 2px solid black;
+    padding: 10px 60px;
+    &:hover {
+        transition: 0.5s;
+        background: #000;
+        color: white;
+    }
+}
+
+// 作品集
+#works {
+    height: 100vh;
+    font-family: $text;
+    background: $color-bg;
+    // 控制6個class
+    #work-box {
+        width: 1200px;
+        display: grid;
+        margin: 0 auto;
+        // repeat(顯示的格數,單位)
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+
+        .work-box-small {
+            img {
+                display: block;
+                width: 100%;
+                height: 300px;
+                background-color: #000;
+                margin: 10px 0;
+            }
+            h2 {
+                text-align: center;
+                // 位移
+                transform: translateY(-32px);
+            }
+            //行內元素改成區塊display block (佔一整行)
+            //行內區塊元素display:inline-block(字多大就多大)
+            span {
+                display: inline-block;
+                border:1px #000 solid;
+                border-radius: 10px;
+                padding:5px 10px ;
+            }
         }
+    }
 }
