@@ -4,6 +4,12 @@ $color-main: #000000;
 $color-sub: #80ed99;
 $text: "Grandstander", cursive;
 $color-bg: #f9f9f9;
+
+//RWD
+$desktop: 1025px;
+$title: 1024px;
+$phone: 767px;
+
 * {
     margin: 0;
     padding: 0;
@@ -19,16 +25,47 @@ $color-bg: #f9f9f9;
     padding: 20px 120px;
     box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
     align-items: center;
+    // 固定頁首:寬度會跑掉
     position: fixed;
     width: 100%;
     background: white;
+    z-index: 1;
+    grid-template-areas: "logo link social ";
+
+    //平板
+    @media screen and (max-width: $title) {
+        grid-template-areas: "logo social menux";
+    }
+    //手機
+    @media screen and (max-width: $phone) {
+        grid-template-areas: "logo social menux";
+        padding: 10px 6px;
+    }
+    // 選單
+    #menux {
+        grid-area: menux;
+
+        // 切換到桌面時隱藏 none
+        @media screen and (min-width: $desktop) {
+            display: none;
+        }
+        //切換到平板時顯示 display預設屬性block
+        @media screen and (max-width: $title) {
+            display: block;
+            margin-left: auto;
+        }
+        //手機
+        @media screen and (max-width: $phone) {
+            width: 32px;
+        }
+    }
 }
 // 左邊Logo
-#logo {
+.logo {
     text-decoration: none;
     font-family: $text;
     font-size: 32px;
-
+    grid-area: logo;
     &:hover {
         color: $color-sub;
     }
@@ -37,6 +74,7 @@ $color-bg: #f9f9f9;
 .link {
     align-items: center;
     margin: 0 auto;
+    grid-area: link;
     a {
         text-decoration: none;
         font-family: "Grandstander", cursive;
@@ -44,19 +82,33 @@ $color-bg: #f9f9f9;
         margin-left: 30px;
         transition: 0.5s;
         padding: 0 10px;
+
         &:hover {
             color: $color-sub;
         }
+    }
+    //RWD平板
+    @media screen and (max-width: $title) {
+        display: none;
     }
 }
 
 .social {
     text-align: right;
+    grid-area: social;
+    //平板
+    @media screen and (max-width: $title) {
+        text-align: center;
+    }
+
     img {
         transition: 0.5s;
         width: 20px;
         margin-left: 30px;
-
+        //手機
+        @media screen and (max-width: $phone) {
+            margin-left: 0;
+        }
         &:hover {
             filter: invert(100%) sepia(22%) saturate(4189%) hue-rotate(56deg) brightness(97%) contrast(90%);
         }
@@ -79,12 +131,20 @@ $color-bg: #f9f9f9;
         margin-top: 50px;
         font-size: 200px;
         font-family: $text;
+        //手機
+        @media screen and (max-width: $phone) {
+            font-size: 60px;
+        }
     }
     p {
         font-family: $text;
         padding: 30px;
         margin-bottom: 50px;
         font-size: 20px;
+        //手機
+        @media screen and (max-width: $phone) {
+            font-size: 16px;
+        }
     }
 }
 
@@ -114,6 +174,17 @@ $color-bg: #f9f9f9;
     height: 100vh;
     font-family: $text;
     background: $color-bg;
+    
+    //平板
+    @media screen and (max-width: $title) {
+        height: auto;
+        padding-bottom: 100px;
+    }
+    //手機
+    @media screen and (max-width: $phone) {
+        height: auto;
+        padding-bottom: 100px;
+    }
     // 控制6個class
     #work-box {
         width: 1200px;
@@ -122,13 +193,22 @@ $color-bg: #f9f9f9;
         // repeat(顯示的格數,單位)
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 10px;
-
+        //平板
+        @media screen and (max-width: $title) {
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0 20px;
+        }
+        //手機
+        @media screen and (max-width: $phone) {
+            grid-template-columns: repeat(1, 1fr);
+        }
         .work-box-small {
             img {
                 display: block;
                 width: 100%;
                 height: 300px;
-                background-color: #000;
+                background-color: #eee;
                 margin: 10px 0;
             }
             h2 {
@@ -160,10 +240,12 @@ footer {
     text-align: center;
     #logo {
         color: white;
+        text-decoration: none;
     }
     .link {
         a {
             color: white;
+            
         }
     }
     .social {
