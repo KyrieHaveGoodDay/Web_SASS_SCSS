@@ -4,14 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="./style.css">
+
     <title>Document</title>
+    <!-- AOS CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <!-- 頁首 -->
     <nav id="navigation">
-        <a href="#" class="logo">Kyrie</a>
+        <a href="#" class="logo" >Kyrie</a>
         <img src="./img/icon-menu.png" alt="選單" id="menux">
         <div class="link">
             <a href="#">關於我</a>
@@ -31,41 +34,46 @@
     </section>
     <!-- 關於我 -->
     <section id="about-me">
-        <h1 class="title">關於我</h1>
-        <h2>Kyrie</h2>
+        <h1 class="title" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-out-sine" data-aos-mirror="true" >關於我</h1>
+        <!-- data-aos="fade-in" = 動畫 -->
+        <!-- data-aos-offset="400" = 延緩 -->
+        <!-- data-aos-duration="3000" = 持續時間 -->
+        <!-- data-aos-mirror 雙向播放(上下滑動) -->
+        <!-- data-aos-once 是否要重複播放動畫 -->
+        <h2 data-aos="fade-down" data-aos-offset="100" data-aos-duration="500" data-aos-delay="500" data-aos-easing="ease-in-sine"  data-aos-mirror="true" >Kyrie</h2>
         <p>我是一位程式設計師，專門客製化設計</p>
         <a href="#" class="button">關於我</a>
     </section>
     <!-- 作品集 -->
     <section id="works">
-        <h1 class="title">作品集</h1>
+        <h1 class="title" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-out-sine" data-aos-mirror="true">作品集</h1>
         <div id="work-box">
-            <div class="work-box-small">
+            <div class="work-box-small" data-aos="fade-down" data-aos-offset="400" data-aos-duration="1000" data-aos-delay="500">
                 <img src="" alt="">
                 <span>類別</span>
                 <h2>作品名稱</h2>
             </div>
-            <div class="work-box-small">
+            <div class="work-box-small" data-aos="fade-down" data-aos-offset="400" data-aos-duration="1000" data-aos-delay="1000">
                 <img src="" alt="">
                 <span>類別</span>
                 <h2>作品名稱</h2>
             </div>
-            <div class="work-box-small">
+            <div class="work-box-small" data-aos="fade-down" data-aos-offset="400" data-aos-duration="1000" data-aos-delay="1500">
                 <img src="" alt="">
                 <span>類別</span>
                 <h2>作品名稱</h2>
             </div>
-            <div class="work-box-small">
+            <div class="work-box-small" data-aos="fade-down" data-aos-offset="400" data-aos-duration="1000" data-aos-delay="500">
                 <img src="" alt="">
                 <span>類別</span>
                 <h2>作品名稱</h2>
             </div>
-            <div class="work-box-small">
+            <div class="work-box-small" data-aos="fade-down" data-aos-offset="400" data-aos-duration="1000" data-aos-delay="1000">
                 <img src="" alt="">
                 <span>類別</span>
                 <h2>作品名稱</h2>
             </div>
-            <div class="work-box-small">
+            <div class="work-box-small" data-aos="fade-down" data-aos-offset="400" data-aos-duration="1000" data-aos-delay="1500">
                 <img src="" alt="">
                 <span>類別</span>
                 <h2>作品名稱</h2>
@@ -78,7 +86,7 @@
     </section>
 
     <footer>
-        <a href="" id="logo">Kyrie</a>
+        <a href="#" id="logo">Kyrie</a>
         <div class="social">
             <a href="#"><img src="./img/icon-github.png" alt="github"></a>
             <a href="#"><img src="./img/icon-fb.png" alt="facebook"></a>
@@ -93,6 +101,12 @@
             Copyright &copy; 2010 - 2020 KID All rights reserved
         </div>
     </footer>
+
+    <!-- AOS CDN -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
