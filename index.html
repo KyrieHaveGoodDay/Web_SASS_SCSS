@@ -6,15 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
     <title>Document</title>
+    <!--  Slick CDN  -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <!-- AOS CDN -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./style.css">
 </head>
 
-<body>
+<body id="top">
     <!-- 頁首 -->
     <nav id="navigation">
-        <a href="#" class="logo" >Kyrie</a>
+        <a href="#" class="logo">Kyrie</a>
         <img src="./img/icon-menu.png" alt="選單" id="menux">
         <div class="link">
             <a href="#">關於我</a>
@@ -30,50 +33,63 @@
     </nav>
     <!-- 橫幅 1-->
     <section id="banner">
-
+        <img src="https://fakeimg.pl/1280x720/?retina=1&text=假圖1&font=noto" data-aos="fade-down">
+        <img src="https://fakeimg.pl/1280x720/?retina=1&text=假圖2&font=noto">
+        <img src="https://fakeimg.pl/1280x720/?retina=1&text=假圖3&font=noto">
+        <img src="https://fakeimg.pl/1280x720/?retina=1&text=假圖4&font=noto">
+        <img src="https://fakeimg.pl/1280x720/?retina=1&text=假圖5&font=noto">
     </section>
     <!-- 關於我 -->
     <section id="about-me">
-        <h1 class="title" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-out-sine" data-aos-mirror="true" >關於我</h1>
+        <h1 class="title" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-out-sine"
+            data-aos-mirror="true">關於我</h1>
         <!-- data-aos="fade-in" = 動畫 -->
         <!-- data-aos-offset="400" = 延緩 -->
         <!-- data-aos-duration="3000" = 持續時間 -->
         <!-- data-aos-mirror 雙向播放(上下滑動) -->
         <!-- data-aos-once 是否要重複播放動畫 -->
-        <h2 data-aos="fade-down" data-aos-offset="100" data-aos-duration="500" data-aos-delay="500" data-aos-easing="ease-in-sine"  data-aos-mirror="true" >Kyrie</h2>
+        <h2 data-aos="fade-down" data-aos-offset="100" data-aos-duration="500" data-aos-delay="500"
+            data-aos-easing="ease-in-sine" data-aos-mirror="true">Kyrie</h2>
         <p>我是一位程式設計師，專門客製化設計</p>
         <a href="#" class="button">關於我</a>
     </section>
     <!-- 作品集 -->
     <section id="works">
-        <h1 class="title" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-out-sine" data-aos-mirror="true">作品集</h1>
+        <h1 class="title" data-aos="fade-right" data-aos-duration="1000" data-aos-easing="ease-out-sine"
+            data-aos-mirror="true">作品集</h1>
         <div id="work-box">
-            <div class="work-box-small" data-aos="fade-down" data-aos-offset="400" data-aos-duration="1000" data-aos-delay="500">
+            <div class="work-box-small" data-aos="fade-down" data-aos-offset="400" data-aos-duration="1000"
+                data-aos-delay="500">
                 <img src="" alt="">
                 <span>類別</span>
                 <h2>作品名稱</h2>
             </div>
-            <div class="work-box-small" data-aos="fade-down" data-aos-offset="400" data-aos-duration="1000" data-aos-delay="1000">
+            <div class="work-box-small" data-aos="fade-down" data-aos-offset="400" data-aos-duration="1000"
+                data-aos-delay="1000">
                 <img src="" alt="">
                 <span>類別</span>
                 <h2>作品名稱</h2>
             </div>
-            <div class="work-box-small" data-aos="fade-down" data-aos-offset="400" data-aos-duration="1000" data-aos-delay="1500">
+            <div class="work-box-small" data-aos="fade-down" data-aos-offset="400" data-aos-duration="1000"
+                data-aos-delay="1500">
                 <img src="" alt="">
                 <span>類別</span>
                 <h2>作品名稱</h2>
             </div>
-            <div class="work-box-small" data-aos="fade-down" data-aos-offset="400" data-aos-duration="1000" data-aos-delay="500">
+            <div class="work-box-small" data-aos="fade-down" data-aos-offset="400" data-aos-duration="1000"
+                data-aos-delay="500">
                 <img src="" alt="">
                 <span>類別</span>
                 <h2>作品名稱</h2>
             </div>
-            <div class="work-box-small" data-aos="fade-down" data-aos-offset="400" data-aos-duration="1000" data-aos-delay="1000">
+            <div class="work-box-small" data-aos="fade-down" data-aos-offset="400" data-aos-duration="1000"
+                data-aos-delay="1000">
                 <img src="" alt="">
                 <span>類別</span>
                 <h2>作品名稱</h2>
             </div>
-            <div class="work-box-small" data-aos="fade-down" data-aos-offset="400" data-aos-duration="1000" data-aos-delay="1500">
+            <div class="work-box-small" data-aos="fade-down" data-aos-offset="400" data-aos-duration="1000"
+                data-aos-delay="1500">
                 <img src="" alt="">
                 <span>類別</span>
                 <h2>作品名稱</h2>
@@ -101,7 +117,25 @@
             Copyright &copy; 2010 - 2020 KID All rights reserved
         </div>
     </footer>
+    <!-- 返回頂端 -->
+    <!-- data-gte-target ="指定的元素" -->
+    <!-- data-gte-offset="位移量" -->
+    <img src="./img/arrow.png" alt="返回頂端" id="arrow" data-gte-target="top" data-gte-offset="0">
 
+    <!-- 前往指定元素 -->
+    <script src="https://kid421.github.io/Web_JavaScript_GoToElement/goToElement.js"></script>
+    <!--  jQuery CDN  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--  Slick CDN  -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+         $("#banner").slick({
+            dots:true,
+            dotsClass:"slick-dots dots",
+            autoplay:true,
+            autoplaySpeed:1500,
+         });
+    </script>
     <!-- AOS CDN -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

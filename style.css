@@ -141,6 +141,34 @@
   width: 100%;
   height: 100vh;
   background: #eee;
+  overflow: hidden;
+}
+
+#banner .dots {
+  bottom: 80px;
+}
+
+@media screen and (max-width: 1024px) {
+  #banner {
+    height: 100%;
+  }
+  #banner .slick-track {
+    height: 900px;
+  }
+  #banner img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #banner .slick-track {
+    height: 500px;
+  }
+  #banner img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 #about-me {
@@ -303,5 +331,15 @@ footer #coperight {
   color: white;
   margin-top: 50px;
   font-size: 12px;
+}
+
+#arrow {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

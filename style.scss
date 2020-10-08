@@ -29,6 +29,7 @@ $phone: 767px;
     position: fixed;
     width: 100%;
     background: white;
+    // 字會穿透首頁，使用z-index調整
     z-index: 1;
     grid-template-areas: "logo link social ";
 
@@ -120,6 +121,34 @@ $phone: 767px;
     width: 100%;
     height: 100vh;
     background: #eee;
+    // 溢出:隱藏
+    overflow: hidden;
+    // overlow之後 dots會不見使用bottom頂起來!
+    .dots {
+        bottom: 80px;
+    }
+    //平板
+    @media screen and (max-width: $title) {
+        height: 100%;
+        .slick-track {
+            height: 900px;
+        }
+        img {
+            
+            object-fit: cover;
+        }
+    }
+    //手機
+    @media screen and (max-width: $phone) {
+        .slick-track {
+            height: 500px;
+        }
+        img {
+            
+            object-fit: cover;
+        }
+        
+    }
 }
 
 // 關於我
@@ -127,6 +156,7 @@ $phone: 767px;
     width: 100%;
     height: 100vh;
     text-align: center;
+
     h2 {
         margin-top: 50px;
         font-size: 200px;
@@ -174,7 +204,7 @@ $phone: 767px;
     height: 100vh;
     font-family: $text;
     background: $color-bg;
-    
+
     //平板
     @media screen and (max-width: $title) {
         height: auto;
@@ -245,7 +275,6 @@ footer {
     .link {
         a {
             color: white;
-            
         }
     }
     .social {
@@ -261,4 +290,16 @@ footer {
         margin-top: 50px;
         font-size: 12px;
     }
+}
+
+// 返回頂端
+#arrow {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    // 滑鼠移動到這個元素顯示手指頭
+    cursor: pointer;
 }
