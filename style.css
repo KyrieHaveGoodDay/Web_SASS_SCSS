@@ -222,13 +222,8 @@
   color: white;
 }
 
-#button-div {
-  text-align: center;
-  margin-top: 50px;
-}
-
 #works {
-  height: 100vh;
+  height: 100%;
   font-family: "Grandstander", cursive;
   background: #f9f9f9;
 }
