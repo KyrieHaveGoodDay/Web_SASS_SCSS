@@ -274,6 +274,8 @@
   height: 300px;
   background-color: #eee;
   margin: 10px 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #works #work-box .work-box-small h2 {
